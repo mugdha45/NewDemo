@@ -20,9 +20,9 @@ jobs:
       PORT: 8080
     steps:
       - name: Get Code
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
       - name: Cache dependencies
-        uses: action/cache@v3
+        uses: actions/cache@v3
         with: 
           path: ~/.npm
           key: ${{env.CACHE_KEY}}-${{hashFiles('**/package-lock.json')}}
